@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Achievements</title>
+    <!-- Google Fonts: Poppins for a clean, professional aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for social media icons and scroll-to-top -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- 1. Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1 class="site-title">Internship Achievements</h1>
+            <p class="subtitle">A collection of successfully completed internships</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. Certificate Gallery Section -->
+        <section class="certificate-gallery-section">
+            <div class="container">
+                <div class="certificates-grid">
+                    <!-- Certificate Card 1 -->
+                    <div class="certificate-card" data-id="1">
+                        <img src="https://placehold.co/500x350/948979/DFD0B8?text=Certificate+1" alt="Web Development Internship Certificate" class="certificate-img">
+                        <div class="card-content">
+                            <h3>Web Development Intern</h3>
+                            <p class="intern-name">Alex Smith</p>
+                            <p class="issue-date">Issued: 01/08/2024</p>
+                            <button class="view-btn">View Certificate</button>
+                        </div>
+                    </div>
+                    <!-- Certificate Card 2 -->
+                    <div class="certificate-card" data-id="2">
+                        <img src="https://placehold.co/500x350/948979/DFD0B8?text=Certificate+2" alt="UX/UI Design Internship Certificate" class="certificate-img">
+                        <div class="card-content">
+                            <h3>UX/UI Design Intern</h3>
+                            <p class="intern-name">Maria Rodriguez</p>
+                            <p class="issue-date">Issued: 15/07/2024</p>
+                            <button class="view-btn">View Certificate</button>
+                        </div>
+                    </div>
+                    <!-- Certificate Card 3 -->
+                    <div class="certificate-card" data-id="3">
+                        <img src="https://placehold.co/500x350/948979/DFD0B8?text=Certificate+3" alt="Data Science Internship Certificate" class="certificate-img">
+                        <div class="card-content">
+                            <h3>Data Science Intern</h3>
+                            <p class="intern-name">Ethan Chang</p>
+                            <p class="issue-date">Issued: 20/06/2024</p>
+                            <button class="view-btn">View Certificate</button>
+                        </div>
+                    </div>
+                    <!-- Certificate Card 4 -->
+                    <div class="certificate-card" data-id="4">
+                        <img src="https://placehold.co/500x350/948979/DFD0B8?text=Certificate+4" alt="Digital Marketing Internship Certificate" class="certificate-img">
+                        <div class="card-content">
+                            <h3>Digital Marketing Intern</h3>
+                            <p class="intern-name">Olivia White</p>
+                            <p class="issue-date">Issued: 10/05/2024</p>
+                            <button class="view-btn">View Certificate</button>
+                        </div>
+                    </div>
+                    <!-- Certificate Card 5 -->
+                    <div class="certificate-card" data-id="5">
+                        <img src="https://placehold.co/500x350/948979/DFD0B8?text=Certificate+5" alt="Mobile App Development Internship Certificate" class="certificate-img">
+                        <div class="card-content">
+                            <h3>Mobile App Intern</h3>
+                            <p class="intern-name">Benjamin Lee</p>
+                            <p class="issue-date">Issued: 05/04/2024</p>
+                            <button class="view-btn">View Certificate</button>
+                        </div>
+                    </div>
+                    <!-- Certificate Card 6 -->
+                    <div class="certificate-card" data-id="6">
+                        <img src="https://placehold.co/500x350/948979/DFD0B8?text=Certificate+6" alt="Cybersecurity Internship Certificate" class="certificate-img">
+                        <div class="card-content">
+                            <h3>Cybersecurity Intern</h3>
+                            <p class="intern-name">Chloe Taylor</p>
+                            <p class="issue-date">Issued: 25/03/2024</p>
+                            <button class="view-btn">View Certificate</button>
+                        </div>
+                    </div>
+                    <!-- Certificate Card 7 -->
+                    <div class="certificate-card" data-id="7">
+                        <img src="https://placehold.co/500x350/948979/DFD0B8?text=Certificate+7" alt="Software Engineering Internship Certificate" class="certificate-img">
+                        <div class="card-content">
+                            <h3>Software Engineering Intern</h3>
+                            <p class="intern-name">Daniel Garcia</p>
+                            <p class="issue-date">Issued: 18/02/2024</p>
+                            <button class="view-btn">View Certificate</button>
+                        </div>
+                    </div>
+                    <!-- Certificate Card 8 -->
+                    <div class="certificate-card" data-id="8">
+                        <img src="https://placehold.co/500x350/948979/DFD0B8?text=Certificate+8" alt="Graphic Design Internship Certificate" class="certificate-img">
+                        <div class="card-content">
+                            <h3>Graphic Design Intern</h3>
+                            <p class="intern-name">Emily Clark</p>
+                            <p class="issue-date">Issued: 01/01/2024</p>
+                            <button class="view-btn">View Certificate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal popup for full-size certificate view -->
+    <div id="certificate-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img id="modal-certificate-img" src="" alt="Full-size Certificate">
+        </div>
+    </div>
+
+    <!-- Optional Scroll-to-top button -->
+    <button id="scroll-to-top" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- 3. Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="copyright">&copy; 2025 Internship Achievements. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js" defer></script>
+</body>
+</html>
