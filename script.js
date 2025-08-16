@@ -5,30 +5,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeModalBtn = document.querySelector('.close-btn');
     const scrollToTopBtn = document.getElementById('scroll-to-top');
 
-    // Open modal on 'View Certificate' button click
+    // Open modal with correct image URL
     certificateCards.forEach(card => {
-        const viewButton = card.querySelector('.view-btn');
-        const cardImgSrc = card.querySelector('.certificate-img').src;
-
-        viewButton.addEventListener('click', () => {
+        const btn = card.querySelector('.view-btn');
+        btn.addEventListener('click', () => {
+            const imgUrl = card.querySelector('img').getAttribute('data-url');
             modal.style.display = 'block';
-            modalImg.src = cardImgSrc;
+            modalImg.src = imgUrl;
         });
     });
 
-    // Close modal when the 'x' is clicked
+    // Close modal
     closeModalBtn.addEventListener('click', () => {
         modal.style.display = 'none';
     });
-
-    // Close modal when clicking outside of it
     window.addEventListener('click', (event) => {
         if (event.target === modal) {
             modal.style.display = 'none';
         }
     });
 
-    // Scroll-to-top button functionality
+    // Scroll-to-top
     window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
             scrollToTopBtn.style.display = 'block';
@@ -36,11 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollToTopBtn.style.display = 'none';
         }
     });
-
     scrollToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
